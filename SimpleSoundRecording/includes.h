@@ -7,6 +7,7 @@
 #include <fstream>
 #include <memory>
 #include <algorithm>
+#include <stdexcept>
 
 template <typename T>
 using SPtr = std::shared_ptr<T>;
