@@ -45,6 +45,7 @@ namespace Music
 			in >> BPM_;
 			Str tmp;
 			std::getline(in, tmp);
+			return in;
 		}
 
 		OStr& Electronic::print(OStr& out) const
@@ -52,6 +53,7 @@ namespace Music
 			Composition::print(out);
 			out << type_ << "\n";
 			out << BPM_ << "\n";
+			return out;
 		}
 	}
 }

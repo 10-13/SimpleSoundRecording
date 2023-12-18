@@ -81,5 +81,6 @@ namespace Music
 		std::getline(in, author_);  // To read '\n' from row
 		std::getline(in, author_);
 		std::getline(in, name_);
+		return in;
 	}
 }

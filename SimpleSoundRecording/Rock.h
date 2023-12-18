@@ -62,12 +62,14 @@ namespace Music
 				type_ = Rock::Type::Classic;
 				break;
 			}
+			return in;
 		}
 
 		OStr& Rock::print(OStr& out) const
 		{
 			Composition::print(out);
 			out << static_cast<char>(type_) << '\n';
+			return out;
 		}
 	}
 }
