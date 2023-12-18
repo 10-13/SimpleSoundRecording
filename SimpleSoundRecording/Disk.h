@@ -1,6 +1,7 @@
 #pragma once
 #include "includes.h"
 #include "Composition.h"
+#include "Save.h"
 
 namespace Music
 {
@@ -12,9 +13,9 @@ namespace Music
 		Disk() = default;
 
 		template <typename T> 
-		void AddTrack(T* track)
+		void AddTrack(T track)
 		{
-			Compositions.push_back(std::make_shared<T>(comp));
+			Compositions.push_back(std::make_shared<T>(track));
 		}
 
 		size_t Length() const
@@ -127,6 +128,31 @@ namespace Music
 			std::sort(Compositions.begin(),
 				Compositions.end(),
 				[](const SPtr<Composition>& a, const SPtr<Composition>& b) { return a->GetAuthor() < b->GetAuthor(); });
+		}
+
+		OStr& print(OStr& out)
+		{
+			out << Compositions.size() << "\n";
+			auto saver = Music::Saving::InitializeForMusic();
+			for (auto& i : Compositions)
+			{
+				saver.Write(out, i);
+			}
+			return out;
+		}
+
+		IStr& read(IStr& in)
+		{
+			size_t sz = 0;
+			in >> sz;
+			Str tmp;
+			std::getline(in, tmp);
+			auto saver = Music::Saving::InitializeForMusic();
+			while (sz-- > 0)
+			{
+				Compositions.push_back(saver.Read(in));
+			}
+			return in;
 		}
 	};
 }

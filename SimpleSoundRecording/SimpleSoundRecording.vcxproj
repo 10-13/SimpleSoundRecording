@@ -135,7 +135,9 @@
     <ClInclude Include="Disk.h" />
     <ClInclude Include="Electronic.h" />
     <ClInclude Include="includes.h" />
+    <ClInclude Include="music.h" />
     <ClInclude Include="Rock.h" />
+    <ClInclude Include="Save.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

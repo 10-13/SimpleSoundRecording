@@ -15,7 +15,8 @@ namespace Music
 				Soft	= 's',
 				Garage	= 'g',
 				Punk	= 'p',
-				Classic = 'c',
+				Country = 'c',
+				Classic = 's',
 			};
 
 			Rock() = default;
@@ -59,6 +60,9 @@ namespace Music
 				break;
 			case static_cast<char>(Rock::Type::Hard):
 				type_ = Rock::Type::Hard;
+				break;
+			case static_cast<char>(Rock::Type::Country):
+				type_ = Rock::Type::Country;
 				break;
 			default:
 				type_ = Rock::Type::Classic;

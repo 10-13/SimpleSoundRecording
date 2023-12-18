@@ -1,14 +1,9 @@
-#include "includes.h"
-
-#include "Rock.h"
-#include "Electronic.h"
-#include "Classic.h"
-
-#include "Disk.h"
-
-using namespace Music::Styles;
+#include "music.h"
 
 int main()
 {
+	std::ifstream fin("disk.mds");
+	Disk disk;
+	disk.read(fin);
 	
 }
