@@ -130,7 +130,9 @@
     <ClCompile Include="main.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Classic.h" />
     <ClInclude Include="Composition.h" />
+    <ClInclude Include="Disk.h" />
     <ClInclude Include="Electronic.h" />
     <ClInclude Include="includes.h" />
     <ClInclude Include="Rock.h" />

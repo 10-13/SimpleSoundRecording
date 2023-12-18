@@ -28,6 +28,8 @@ namespace Music
 
 			OStr& print(OStr& out) const override;
 
+			Str GetStyle() const override;
+
 		protected:
 			Type type_{Type::Hard};
 		};
@@ -70,6 +72,11 @@ namespace Music
 			Composition::print(out);
 			out << static_cast<char>(type_) << '\n';
 			return out;
+		}
+
+		Str Rock::GetStyle() const
+		{
+			return "Rock";
 		}
 	}
 }

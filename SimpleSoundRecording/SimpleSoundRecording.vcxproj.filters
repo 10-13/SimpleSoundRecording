@@ -32,5 +32,11 @@
     <ClInclude Include="Electronic.h">
       <Filter>Исходные файлы</Filter>
     </ClInclude>
+    <ClInclude Include="Classic.h">
+      <Filter>Исходные файлы</Filter>
+    </ClInclude>
+    <ClInclude Include="Disk.h">
+      <Filter>Исходные файлы</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

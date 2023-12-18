@@ -21,6 +21,8 @@ namespace Music
 
 			OStr& print(OStr& out) const override;
 
+			Str GetStyle() const override;
+
 		protected:
 			Str type_;
 			size_t BPM_;
@@ -54,6 +56,11 @@ namespace Music
 			out << type_ << "\n";
 			out << BPM_ << "\n";
 			return out;
+		}
+
+		Str Electronic::GetStyle() const
+		{
+			return "Electronic";
 		}
 	}
 }
